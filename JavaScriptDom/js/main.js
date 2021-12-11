@@ -1,42 +1,17 @@
 'use strict';
 
 {
-  class Post { // 親クラス
-    constructor(text){
-      this.text = text,
-      this.likeCount = 0
-    }
+  document.querySelector('button').addEventListener('click', () => {
+    const targetNode = document.getElementById('target');
+    
+    // targetNode.className = 'my-color my-border';
+    // targetNode.classList.add('my-color');
+    // if (targetNode.classList.contains('my-color') === true ) {
+    //   targetNode.classList.remove('my-color');
+    // } else {
+    //   targetNode.classList.add('my-color');
+    // }
 
-    show() {
-      console.log(`${this.text} - ${this.likeCount} likes`);
-    }
-
-    like() {
-      this.likeCount++;
-      this.show();
-    }
-
-  }
-
-  class SponsoredPost extends Post { // 子クラス
-    constructor(text, sponsor){
-      super(text);
-      this.sponsor = sponsor;
-    }
-
-    show() {
-      super.show();
-      console.log(`...sponsored by ${this.sponsor}`);
-    }
-
-  }
-
-  const posts = [
-    new Post('JavaScript'),
-    new Post('Python'),
-    new SponsoredPost('3分動画でマスターしよう', 'dotinstall')
-  ];
-
-  posts[2].show();
-  posts[2].like();
+    targetNode.classList.toggle('my-color');
+  });
 }
