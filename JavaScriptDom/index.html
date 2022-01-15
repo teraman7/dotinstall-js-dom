@@ -12,15 +12,22 @@
       .my-border {
         border-bottom: 4px solid orange;
       }
+
+      li {
+        cursor: pointer;
+      }
+
+      li.done {
+        text-decoration: line-through;
+      }
     </style>
   </head>
   <body>
-    <button>Run</button>
-    
-    <h1 id="target" class="my-border">ドットインストール</h1>
-    <p id="test">こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</p>
-    <p id="test">こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</p>
-    <p id="test">こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</p>
+    <ul> <!-- e.currentTarget-->
+      <li>Todo</li> <!-- e.target-->
+      <li>Todo</li>
+      <li>Todo</li>
+    </ul>
 
     <script src="js/main.js"></script>
   </body>
